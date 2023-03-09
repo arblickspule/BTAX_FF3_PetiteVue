@@ -1,6 +1,7 @@
 { pkgs }: {
 	deps = [
-		pkgs.postgresql
+		pkgs.sqlite.bin
+  pkgs.postgresql
   pkgs.php74
 	];
 }

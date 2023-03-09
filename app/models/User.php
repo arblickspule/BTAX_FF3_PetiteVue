@@ -83,6 +83,12 @@ class User extends DB\SQL\Mapper {
 		$this->load(array('hash=? AND activated=0',$hash));
 		$this->copyTo('POST');
 	}
+
+  public function getByAPIKey($apikey) 
+	{
+		$this->load(array('apikey=? AND activated=0',$apikey));
+		$this->copyTo('POST');
+	}
 	
 	public function checkActivatedHash($hash) 
 	{
